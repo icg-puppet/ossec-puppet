@@ -1,6 +1,6 @@
 #Define a log-file to add to ossec
 define ossec::addlog_command(
-  $logtype = 'syslog',
+  $logtype = 'command',
   $logcommand,
   $logfrequency = '60',
 ) {
