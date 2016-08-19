@@ -197,3 +197,20 @@ Jose Luis Ruiz <jose@wazuh.com>:
   * Can now set a minimal activeresponse entry containing just repeated_offenders by defining $ar_repeated_offenders in the ossec::client. (pull request #26 thanks @ialokin)
   * Add variable to enable prefilter command.  (pull request #27 thanks @cmblong)
   * Set service provider to redhat on Redhat systems. (pull request #28 thanks @cmblong))
+
+  2016-06-14 Jose Luis Ruiz  - 2.0.13
+  ===========================================================
+
+  * Adding xenial to the supported distributions.(pull request #31 thanks @stephen-kainos)
+
+  2016-06-14 Jose Luis Ruiz  - 2.0.14
+  ===========================================================
+
+  * Add prefilter to agent config. (pull request #32 thanks @cmblong )
+  * Add function addlog to the agent. (issue #30 thanks @paul-cs)
+  * Add the apt::key can set a proxy and the key add process could be done. (issue #34 thanks @drequena)
+
+  2016-xx-xx Jose Luis Ruiz  - 2.0.15
+  ===========================================================
+
+  * Add option to enable syslog output. (pull request #35 thanks @TravellingGUy )
