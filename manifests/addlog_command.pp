@@ -7,10 +7,10 @@ define ossec::addlog_command(
 ) {
   require ossec::params
 
-  concat::fragment { "ossec.conf_20-${commandalias}":
+  concat::fragment { "ossec.conf_21-${commandalias}":
     target  => $ossec::params::config_file,
-    content => template('ossec/20_ossecLogfile_command.conf.erb'),
-    order   => 20,
+    content => template('ossec/21_ossecLogfile_command.conf.erb'),
+    order   => 21,
     notify  => Service[$ossec::params::server_service]
   }
 
