@@ -2,6 +2,7 @@
 define ossec::addlog_command(
   $logtype = 'command',
   $logcommand,
+  $commandalias,
   $logfrequency = '60',
 ) {
   require ossec::params
