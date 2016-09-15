@@ -1,10 +1,16 @@
+# Repo installation
 class ossec::repo (
   $redhat_manage_epel = true,
 ) {
   case $::osfamily {
     'Debian' : {
+      # apt-key added by issue #34
+      apt::key { 'puppetlabs':
+        id     => '9FE55537D1713CA519DFB85114B9C8DB9A1B1C65',
+        source => 'http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key'
+      }
       case $::lsbdistcodename {
-        /(precise|trusty|vivid|wily)/: {
+        /(precise|trusty|vivid|wily|xenial)/: {
 
           apt::source { 'wazuh':
             ensure      => present,
@@ -14,8 +20,6 @@ class ossec::repo (
             repos       => 'main',
             include_src => false,
             include_deb => true,
-            key         => '9FE55537D1713CA519DFB85114B9C8DB9A1B1C65',
-            key_source  => 'http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key',
           }
           ~>
           exec { 'update-apt-wazuh-repo':
@@ -33,8 +37,6 @@ class ossec::repo (
             repos       => 'main',
             include_src => false,
             include_deb => true,
-            key         => '9FE55537D1713CA519DFB85114B9C8DB9A1B1C65',
-            key_source  => 'http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key',
           }
           ~>
           exec { 'update-apt-wazuh-repo':

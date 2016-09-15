@@ -1,6 +1,6 @@
 {
   "name": "wazuh-ossec",
-  "version": "2.0.10",
+  "version": "2.0.14",
   "author": "WAZUH",
   "summary": "Install and configure OSSEC-HIDS client and server",
   "license": "Apache-2.0",
@@ -42,7 +42,8 @@
         "Precise",
         "Trusty",
         "Vivid",
-        "Wily"
+        "Wily",
+        "Xenial"
       ]
     },
     {
