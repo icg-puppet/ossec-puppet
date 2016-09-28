@@ -3,7 +3,7 @@ class ossec::client(
   $ossec_active_response   = true,
   $ossec_rootcheck         = true,
   $ossec_server_ip         = undef,
-  $ossec_server_hostname   = undef,
+  $ossec_server_hostname   = hiera("ossec::client::ossec_server_hostname", undef),
   $ossec_scanpaths         = [],
   $ossec_emailnotification = 'yes',
   $ossec_ignorepaths       = [],
