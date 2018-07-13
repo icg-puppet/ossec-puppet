@@ -10,7 +10,7 @@ class ossec::repo (
         source => 'http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key'
       }
       case $::lsbdistcodename {
-        /(precise|trusty|vivid|wily|xenial)/: {
+        /(precise|trusty|vivid|wily|xenial|bionic)/: {
 
           apt::source { 'wazuh':
             ensure      => present,
